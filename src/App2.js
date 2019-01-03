@@ -46,13 +46,15 @@ export default class App extends Component {
   }
 
   render() {
+    const todos = this.getTodos();
+
     return (
       <div className="App" >
         <Form
-          onSubmit={text => this.setTodos([{ text, complete: false }, ...this.getTodos()])}
+          onSubmit={text => this.setTodos([{ text, complete: false }, ...todos])}
         />
         <div>
-          {this.getTodos().map(({ text, complete }, i) => (
+          {todos.map(({ text, complete }, i) => (
             <div
               key={text}
               onClick={() => this.toggleComplete(i)}
