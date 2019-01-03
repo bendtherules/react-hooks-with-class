@@ -32,7 +32,7 @@ export default class App extends Component {
   }
 
   toggleComplete = (i) => {
-    this.this.setTodos(
+    this.setTodos(
       this.getTodos().map(
         (todo, k) =>
           k === i
