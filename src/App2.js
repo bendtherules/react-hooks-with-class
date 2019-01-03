@@ -133,6 +133,8 @@ export default class App extends Component {
       const data = await response.json();
       const [item] = data.results;
       // TODO: If possible, batch these two updates
+      // In general, merging should be done for most set{Key} calls,
+      // to be similar to today's classes
       setData(item);
       setLoading(false);
     }, () => ([this.getCount()]));
