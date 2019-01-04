@@ -35,6 +35,7 @@ export default class App extends Component {
     ]);
   }
 
+  // TODO: Make superclass out of this mocked functions
   useEffect(asyncFn, dependencyArrayFnOptional = undefined) {
     this._internal.effects.push({
       asyncFn,
